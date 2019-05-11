@@ -7,16 +7,38 @@
 const cards = ["Queen", "Queen", "King", "King"];
 const cardsInPlay = [];
 
-let cardOne = cards[0];
-cardsInPlay.push(cardOne);
+function checkForMatch() {
+	if (cardsInPlay[0] === cardsInPlay[1]) {
+		console.log("You found a match!");
+	} else {
+		console.log("Sorry, try again!");
+	}
+}
 
-let cardTwo = cards[1];
-cardsInPlay.push(cardTwo);
+//let cardOne = cards[0];
+//cardsInPlay.push(cardOne);
 
+//let cardTwo = cards[1];
+//cardsInPlay.push(cardTwo);
+
+
+
+
+function flipCard(cardId) {
+	console.log("User Flipped " + cards[cardId]);
+	cardsInPlay.push(cards[cardId]);
 if (cardsInPlay.length === 2) {
-  if (cardsInPlay[0] === cardsInPlay[1]) {
-  alert("You found a matching pair!"); 
-} else {
-	alert("Sorry, try again!");
+ checkForMatch();
 }
-}
+}	
+
+
+flipCard(0);
+flipCard(2);
+
+
+
+//  if (cardsInPlay[0] === cardsInPlay[1]) {
+//   alert("You found a matching pair!"); 
+// } else {
+// 	alert("Sorry, try again!");
